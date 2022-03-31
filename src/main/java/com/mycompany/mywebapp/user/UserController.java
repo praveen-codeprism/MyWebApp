@@ -33,6 +33,12 @@ public class UserController {
         model.addAttribute("pageTitle","Add New User");
         return "signup_form";
     }
+    @GetMapping("/users/myprofile")
+    public String myProfile(Model model){
+        model.addAttribute("user",new User());
+        model.addAttribute("pageTitle","Add New User");
+        return "myprofile";
+    }
     @PostMapping("/users/save")
     public String saveUser(User user, RedirectAttributes ra){
 

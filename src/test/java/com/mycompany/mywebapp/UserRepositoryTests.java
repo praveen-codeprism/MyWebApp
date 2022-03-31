@@ -22,6 +22,7 @@ public class UserRepositoryTests {
         user.setFirstname("Praveen");
         user.setLastname("Pochammala");
         user.setPhonenumber("9505989322");
+        user.setProfession("Associate Software Engineer");
         User savedUser= repo.save(user);
         Assertions.assertThat(savedUser).isNotNull();
         Assertions.assertThat(savedUser.getId()).isGreaterThan(0);

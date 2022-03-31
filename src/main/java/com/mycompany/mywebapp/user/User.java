@@ -19,6 +19,8 @@ public class User {
     @Column(length = 12,nullable = false,name = "phone_number")
     private String phonenumber;
     private boolean enabled;
+    @Column(length = 45,nullable = false,name = "profession")
+    private String profession;
 
 
     public Integer getId() {
@@ -86,5 +88,13 @@ public class User {
 
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 }
