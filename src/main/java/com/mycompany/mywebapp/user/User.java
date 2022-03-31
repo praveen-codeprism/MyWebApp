@@ -16,7 +16,12 @@ public class User {
     private String firstname;
     @Column(length = 45,nullable = false,name = "last_name")
     private String lastname;
+    @Column(length = 12,nullable = false,name = "phone_number")
+    private String phonenumber;
     private boolean enabled;
+    @Column(length = 45,nullable = false,name = "profession")
+    private String profession;
+
 
     public Integer getId() {
         return id;
@@ -75,5 +80,21 @@ public class User {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 }
